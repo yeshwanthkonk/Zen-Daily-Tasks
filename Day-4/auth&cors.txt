@@ -1,0 +1,26 @@
+Auth:
+OAuth is an open-standard authorization protocol or framework that describes how unrelated servers and services can safely allow authenticated access to their assets without actually sharing the initial, related, single logon credential. In authentication parlance, this is known as secure, third-party, user-agent, delegated authorization.
+
+How it works:
+The first website connects to the second website on behalf of the user, using OAuth, providing the user’s verified identity.
+The second site generates a one-time token and a one-time secret unique to the transaction and parties involved.
+The first site gives this token and secret to the initiating user’s client software.
+The client’s software presents the request token and secret to their authorization provider (which may or may not be the second site).
+If not already authenticated to the authorization provider, the client may be asked to authenticate. After authentication, the client is asked to approve the authorization transaction to the second website.
+The user approves (or their software silently approves) a particular transaction type at the first website.
+The user is given an approved access token (notice it’s no longer a request token).
+The user gives the approved access token to the first website.
+The first website gives the access token to the second website as proof of authentication on behalf of the user.
+The second website lets the first website access their site on behalf of the user.
+The user sees a successfully completed transaction occurring.
+
+Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP headers to tell browsers to give a web application running at one origin, access to selected resources from a different origin. A web application executes a cross-origin HTTP request when it requests a resource that has a different origin (domain, protocol, or port) from its own.
+
+Requests used CORS
+This cross-origin sharing standard can enable cross-site HTTP requests for:
+
+1.    Invocations of the XMLHttpRequest or Fetch APIs, as discussed above.
+2.    Web Fonts (for cross-domain font usage in @font-face within CSS), so that servers can deploy TrueType fonts that         can only be cross-site loaded and used by web sites that are permitted to do so.
+3.    WebGL textures.
+4.    Images/video frames drawn to a canvas using drawImage().
+5.    CSS Shapes from images.
