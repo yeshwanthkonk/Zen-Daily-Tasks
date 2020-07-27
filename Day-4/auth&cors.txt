@@ -19,7 +19,7 @@ Cross-Origin Resource Sharing (CORS) is a mechanism that uses additional HTTP he
 Requests used CORS
 This cross-origin sharing standard can enable cross-site HTTP requests for:
 
-1.    Invocations of the XMLHttpRequest or Fetch APIs, as discussed above.
+1.    Invocations of the XMLHttpRequest or Fetch APIs.
 2.    Web Fonts (for cross-domain font usage in @font-face within CSS), so that servers can deploy TrueType fonts that         can only be cross-site loaded and used by web sites that are permitted to do so.
 3.    WebGL textures.
 4.    Images/video frames drawn to a canvas using drawImage().
