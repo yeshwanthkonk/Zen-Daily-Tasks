@@ -1,3 +1,4 @@
+https://www.html5rocks.com/en/tutorials/internals/howbrowserswork/
 Main Structure of Web Browser:
 
 1. The user interface: this includes the address bar, back/forward button, bookmarking menu, etc. Every part of the browser display except the window where you see the requested page.
