@@ -51,6 +51,19 @@ class LED extends TV{
 		}
 	}
 }
-
+class Plasma extends TV{
+	constructor(thickness, energy_usage, lifespan, refresh_rate,price, inches, OnOFF, brand, channel, volume){
+		super(price, inches, OnOFF, brand, channel, volume)
+		viewingAngle(){
+			return -1
+		}
+		Backlight(){
+			return -1
+		}
+		DisplayDetails(){
+			return this.status()+" Thickness "+this.thickness+", Energy_usage "+this.energy_usage+", LifeSpan "+this.lifespan
+		}
+	}
+}
 le = new LED()
 console.log(le.DisplayDetails())
