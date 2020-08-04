@@ -14,6 +14,17 @@
             border: 1px solid black;
             border-collapse: collapse;
         }
+        .digi{
+            background-color: azure;
+            display: inline-block;
+            font-size: 18px;
+            padding: 10px 20px;
+            text-decoration: none;
+            text-align: center;
+        }
+        a.digi:hover{
+            text-decoration: underline;
+        }
         </style>
     </head>
     <body>
@@ -381,13 +392,75 @@
                 </tr>
             </table>
             <b> For Paperless PAN Application: &nbsp; &nbsp;</b>
-            <label for="Citi_Yes">Yes</label>
-            <input type="radio" id="Citi_Yes" name="Citizen" value="Yes" checked>
-            <label for="Citi_No">No</label>
-            <input type="radio" id="Citi_No" name="Citizen" value="No">
+            <label for="PAP_LESS_Yes">Yes</label>
+            <input type="radio" id="PAP_LESS_Yes" name="Paper_Less" value="Yes" checked>
+            <label for="PAP_LESS_No">No</label>
+            <input type="radio" id="PAP_LESS_No" name="Paper_Less" value="No">
             <br>
-            <br>
-            <input type="submit" value="Submit" style="text-align: center;">
+
+            <table style="width: 100%;">
+                <tr>
+                    <td >
+                        <input type="radio" name="DSC" id="DSC" checked>
+                        <label for="DSC">DSC</label>
+                        <select name="USER_TYPE" id="DSCDrop" style="WIDTH: 200px; HEIGHT: 22px">
+                            <option value="select">--Select--</option>
+                            <option value="MINOR">Minor</option>
+                            <option value="RA">Lunatic/Idiot</option>
+                            <option value="AP">Self</option>
+                        </select>
+                        <a href="https://tin.tin.nsdl.com/pan/InstructionDSC.html" target="_new">Guidelines for DSC user</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Photo</td>
+                    <td>
+                        <input type="file" name="Up_Ph" id="Up_Ph">
+                    </td>
+                    <td>Upload Signature</td>
+                    <td>
+                        <input type="file" name="Up_Sig" id="Up_Sig">
+                    </td>
+                </tr>
+                <tr>
+                    <td>Upload Documents</td>
+                    <td colspan="3">
+                        <input type="file" name="Up_Doc" id="Up_Doc">
+                    </td>
+                    <td>OR</td>
+                </tr>
+                <tr>
+                    <td>
+                        <a class="digi" href="https://google.com">Fetch from DigiLock</a>
+                    </td>
+                </tr>
+            </table>
+
+            <table style="width: 100%;">
+                <tr>
+                    <td>ALREADY UPLOADED PHOTO:</td>
+                    <td>
+                        <input type="text" id="ALREADY_UPLOADED_PHOTO" name="ALREADY_UPLOADED_PHOTO" size="40" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ALREADY UPLOADED SIGNATURE:</td>
+                    <td>
+                        <input type="text" id="ALREADY_UPLOADED_SIG" name="ALREADY_UPLOADED_SIG" size="40" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ALREADY UPLOADED DOCUMENTS:</td>
+                    <td>
+                        <textarea type="text" id="ALREADY_UPLOADED_DOC" name="ALREADY_UPLOADED_DOC" cols="40" rows="5" readonly></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="CENTER">
+                        <input type="submit" value="Submit">
+                    </td>
+                </tr>
+            </table>
         </form>
         <script>
             function afterSend(){
@@ -396,3 +469,4 @@
         </script>
     </body>
 </html>
+
