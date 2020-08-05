@@ -9,7 +9,7 @@
             }
             .top-div{
                 background-color: gray;
-                height: 40%;
+                height: 35%;
                 text-align : center;
                 
             }
@@ -17,7 +17,7 @@
                 border: 0px solid block;
                 padding-top: 3%;
             }
-            img{
+            .img-class{
                 border-radius: 50%;
                 border: 4px dotted #efb810;
             }
@@ -32,13 +32,53 @@
                 border-radius: 10px;
             }
             .white-box{
-                height: 13%;
+                height: 40px;
                 width: 100%;
                 background-color: whitesmoke;
-                margin-top: -60px;
+                margin-top: -65px;
             }
             .intro-div{
                 text-align: center;
+            }
+            
+            
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            div{
+                word-wrap: break-word;
+            }
+            .headings{
+                color: gray;
+                font-size: 30px;
+                padding-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .left-side{
+                width: 45%;
+                float: left;
+                padding-top: 2%;
+                padding-left: 4%;
+            }
+            .ver-line{
+                width: 10%;
+                float: left;
+                width: 1%;
+                border-left: 2px solid grey;
+                margin-left: 1%;
+                height: 100%;
+                
+            }
+            .right-side{
+                width:45%;
+                float: left;
+                padding-top: 2%;
+                padding-left: 3%;
+            }
+            .work-exp{
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+
             }
         </style>
     </head>
@@ -46,14 +86,12 @@
         <div class="main">
             <div class="top-div">
                 <div class="img-div">
-                    <img src="profile_1.webp" height="55%" width="12%">
+                    <img class="img-class" src="profile_1.webp" height="50%" width="15%">
                 </div>
                 <div class="name-div">
                     <b>BRIAN DUDEY</b>
                 </div>
-                <div class="white-box">
-
-                </div>
+                <div class="white-box"></div>
             </div>
             <div class="intro-div">
                 <p>
@@ -61,6 +99,111 @@
                 </p>
             </div>
             <hr>
+            <div class="left-side">
+                <div class="profile">        
+                    <img class="img-class" src="profile.png" height="6%" width="6%" style="float: left; margin-right: 30px;">
+                    <p class="headings">Profile</p>
+                    <div style="color: black;">
+                        <p>
+                            Users with the appropriate permissions will have access to a Read More button that expands additional details about an action or change. 
+                            Furthermore, each type of activity has an associated glyph that is appropriate to the activity (e.g. an envelope beside an entry about a 
+                            sent email) and a timestamp.
+                        </p>
+                    </div>
+                </div>
+                <div class="skills">        
+                    <img class="img-class" src="skills.png" height="6%" width="6%" style="float: left; margin-right: 30px;">
+                    <p class="headings">Skills</p>
+                    <div style="color: black;">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td colspan="2" style="font-size: 20px; padding-left: 30%;"><b>Technical Skills</b></td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">JavaScript</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">Python</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">C++/C</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">MySql/Postgresql</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">Flask/Django</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                            <tr>
+                                <td align="left" style="font-size: 25px; padding-left: 10px;">AWS/Apache</td>
+                                <td align="right"> <img src="skill-level.png" height="20px" width="100%" style=" margin-right: 20px ;border-radius: 0%;"> </td>
+                            </tr>
+                        </table>
+                        <p>
+                            Users with the appropriate permissions will have access to a Read More button that expands additional details about an action or change. 
+                            Furthermore, each type of activity has an associated glyph that is appropriate to the activity (e.g. an envelope beside an entry about a 
+                            sent email) and a timestamp.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="ver-line">
+                &nbsp;
+            </div>
+            <div class="right-side">
+                <div >        
+                    <img class="img-class" src="work.png" height="6%" width="6%" style="float: left; margin-right: 30px;">
+                    <p class="headings">Work Experience</p>
+                    <div class="work-exp">
+                        <table style="width: 100%;">
+                            <tr>
+                                <td><b>Full Stack Developer</b></td>
+                                <td>06/2016 - 06/2020</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    IIT Research Park GUVI, Chennai TN
+                                </td>
+                            </tr>
+                        </table>
+                        <ul type="disc">
+                            <li>
+                                A Full Stack Developer with 5 years of experience in Python, Django, Flask for Retail eCommerce, Javascript, MERN, etc.                                 
+                            </li>
+                            <li>
+                                Received SPOT Award and Best Scrum Team while working at Digitalico.
+                            </li>
+                            <li>Achieved a Lighthouse score of 100/100 on our frontend</li>
+                            <li>Built a "UI leadership group" at FullStack Labs Inc. to mentor and train new engineers</li>
+                            <li>Improved legacy front end by replacing it with AngularJS, Tomcat API, Java and Spring. 
+                                Resulted into 50% faster loading times for our data heavy GIS application.
+                            </li>
+                            <li>
+                                Built CI/CD pipelines using Jenkins, Docker, Kubernetes and custom scripts - helping teams deploy more than 30 times in a day
+                            </li>
+                            <li>
+                                A Full Stack Developer with 5 years of experience in Python, Django, Flask for Retail eCommerce, Javascript, MERN, etc.                                 
+                            </li>
+                            <li>
+                                Received SPOT Award and Best Scrum Team while working at Digitalico.
+                            </li>
+                            <li>Achieved a Lighthouse score of 100/100 on our frontend</li>
+                            <li>Built a "UI leadership group" at FullStack Labs Inc. to mentor and train new engineers</li>
+                            <li>Improved legacy front end by replacing it with AngularJS, Tomcat API, Java and Spring. 
+                                Resulted into 50% faster loading times for our data heavy GIS application.
+                            </li>
+                            <li>
+                                Built CI/CD pipelines using Jenkins, Docker, Kubernetes and custom scripts - helping teams deploy more than 30 times in a day
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
 </html>
