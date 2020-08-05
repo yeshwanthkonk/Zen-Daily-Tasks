@@ -3,25 +3,65 @@
         <title>
             IFactory Slant Design
         </title>
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
         <style>
             fieldset {
-                border: 1px dotted whitesmoke;
+                border: 2px dotted whitesmoke;
+                border-radius: 50px;
                 color: #f5f5f5;
                 margin: auto;
-                height: 90%;
+                height: 1000px;
+                margin-left: 50px;
+                margin-right: 50px;
             }  
             .main{
-                background-color: midnightblue;
-                width: 50%;
+                border-radius: 50px;
+                background-color: #1d011a;
+                width: 800px;
                 margin: auto;
-                height: 100%;
+                
+            }
+            legend{
+                margin-top: 30px;
+                font-size: 30px;
+                font-family: 'Rubik', sans-serif;
+            }
+            .font-class{
+                font-family: 'Poiret One', cursive;
+                font-size: 40px;
+                font-weight: 400;
+                text-align: center;
+            }
+            .trans{
+                background-color: white;
+                position: absolute;
+                left: 23%;
+                width: 900px;
+                z-index: 1;
+                padding-bottom: 50px;
+                transform: rotate(-3deg);
             }
         </style>
     </head>
-    <body>
+    <body style="margin: 0px;">
         <div class="main">
-            <fieldset style="width: 90%;">
-                <legend align="center" style="margin-top: 30px;">  &nbsp;&nbsp;&nbsp; IFACTORY  &nbsp;&nbsp;&nbsp;  </legend>
+            <fieldset >
+                <legend align="center">  &nbsp;&nbsp;&nbsp; IFACTORY<sup><img src="flower.PNG" width="20px"></sup>  &nbsp;&nbsp;&nbsp;  </legend>
+                <section class="font-class" style="height: 350px;">
+                    <div>
+                        <div><span style="font-size: 100px;">S</span><span>crolling IN WEB DESIGN</span></div>
+                        <div><img src="mouse.PNG"></div>
+                        <div style="font-size: 40px;">THE LONG & THE SHORT OF IT</div>
+                    </div>
+                </section>
+                <section class="font-class" style="height: 450px; color: black;">
+                    <div class="trans">
+                        <div><span style="font-size: 100px;">S</span><span>crolling IN WEB DESIGN</span></div>
+                        <div><img src="mouse.PNG"></div>
+                        <div style="font-size: 40px;">THE LONG & THE SHORT OF IT</div>
+                    </div>
+                </section>
             </fieldset>
         </div>
     </body>
