@@ -94,7 +94,7 @@
             top_div.setAttribute('class','top-div');
 
             var img_div = document.createElement('div');
-            img_div.setAttribute('class','img_div');
+            img_div.setAttribute('class','img-div');
             var img_class = document.createElement('img');
             img_class.setAttribute('class','img-class');
             img_class.setAttribute('src', 'profile_1.webp');
@@ -145,11 +145,56 @@
             pro_div.append(pro_img, p_pro, pro_div_2);
 
 
-            
+
             left_side.append(pro_div);
 
+            var ver_line = document.createElement('div');
+            ver_line.setAttribute('class',"ver-line");
+            ver_line.innerHTML = '&nbsp;'
 
-            main.append(top_div, intro_div, hr, left_side);
+            var right_side = document.createElement('div');
+            right_side.setAttribute('class',"right-side");
+
+            var pro_div_right = document.createElement('div');
+            var pro_img_right = document.createElement('img');
+            pro_img_right.setAttribute('class','img-class');
+            pro_img_right.setAttribute('src',"work.png");
+            pro_img_right.setAttribute('height','6%');
+            pro_img_right.setAttribute('width','6%');
+            pro_img_right.setAttribute('style',"float: left; margin-right: 30px;");
+            var p_pro_right = document.createElement('p');
+            p_pro_right.setAttribute('class','headings');
+            p_pro_right.innerText="Work Experience";
+
+            var work_exp = document.createElement('div');
+            work_exp.setAttribute('class', "work-exp");
+            var tabl = document.createElement('table');
+            tabl.setAttribute('style', 'width: 100%;')
+
+            var tr_1 = document.createElement('tr');
+            var td_1 = document.createElement('td');
+            var td_b_1 = document.createElement('b');
+            td_b_1.innerText = "Full Stack Developer";
+            var td_2 = document.createElement('td');
+            td_2.innerText = "06/2016 - 06/2020";
+            td_1.append(td_b_1);
+            tr_1.append(td_1, td_2);
+
+            var tr_2 = document.createElement('tr');
+            var td_3 = document.createElement('td');
+            td_3.innerText = "IIT Research Park GUVI, Chennai TN";
+            tr_2.append(td_3);
+
+            tabl.append(tr_1, tr_2);
+
+            work_exp.append(tabl);
+
+
+            pro_div_right.append(pro_img_right, p_pro_right, work_exp);
+
+            right_side.append(pro_div_right);
+
+            main.append(top_div, intro_div, hr, left_side, ver_line, right_side);
             document.body.append(main);
         </script>
     </body>
