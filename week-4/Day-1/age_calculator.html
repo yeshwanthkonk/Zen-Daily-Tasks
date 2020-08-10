@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>
+            Age Calculator
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+        <style>
+            .my-cont{
+                margin-top: 5em;
+                color: white;
+            }
+            .heading{
+                padding: 10px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            .content{
+                padding: 20px;
+                padding-bottom: 10px;
+            }
+            .date{
+                padding: 15px;
+                             
+            }
+            input{
+                float: right;
+                padding: 3px;
+                width: 30%;
+                border-radius: 3px;
+                border: 1px solid gray;
+            }
+            .date-label{
+                display: inline;
+            }
+            .butt{
+                margin: 20px 0px;
+            }
+            #output{
+                height: 200px;
+                border-radius: 5px;
+                padding: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="display-4 bg-success heading">
+                Age Calculator
+            </div>
+            <div class="bg-light content">
+                <div class='date'>
+                    <div class="date-label"> Choose Date of Birth</div>
+                    <input type='date' id='dob'>
+                </div>
+                <div class='date'>
+                    <div class="date-label"> Choose Date by which Age Need to be Calculated</div>
+                    <input type='date' id='to_date'>
+                </div>
+                <div class="text-center butt">
+                    <button onclick="calculate()" class="btn btn-primary">Calculate</button>
+                </div>
+                
+            </div>
+            <div id='output' class="bg-warning">
+                Details:
+            </div>
+        </div>
+        <script>
+            document.getElementById('to_date').defaultValue = new Date().toISOString().slice(0, 10);
+            function calculate(){
+                let dob = document.getElementById('dob').value;
+                if(dob == ""){
+                    document.getElementById('output').innerText = "Error!\nWe need date but no date was choosen."
+                }
+                else{
+                    let to_date = document.getElementById('to_date').value;
+                    dob = new Date(dob);
+                    to_date = new Date(to_date);
+                    let ms = (to_date - dob);
+                    let sd = ms/1000;
+                    let md = sd/60;
+                    let dc = md/(24*60);
+                    let years = to_date.getFullYear() - dob.getFullYear();
+                    if(dob.getMonth() > to_date.getMonth()){
+                        years--;
+                    }
+                    else if(dob.getMonth() == to_date.getMonth()){
+                        if(dob.getDate()-1 > to_date.getDate()){
+                            years--;
+                        }
+                    }
+                    
+                    let Month_diff = (12*(to_date.getFullYear() - dob.getFullYear())) - dob.getMonth() + to_date.getMonth();
+                    
+                    
+                    let st = "Details: "+"\n"+
+                             "Day Count: "+dc+"\n"+
+                             "Year Difference: "+years+"\n"+
+                             "Month Difference: "+Month_diff+"\n"+
+                             "Minutes Difference: "+md+"\n"+
+                             "Seconds Difference: "+sd+"\n"+
+                             "Milliseconds Difference: "+ms;
+                    document.getElementById('output').innerText = st;
+                }
+            }
+
+        </script>
+    </body>
+</html>

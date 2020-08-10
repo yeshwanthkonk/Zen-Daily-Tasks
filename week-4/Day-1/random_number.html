@@ -1,0 +1,50 @@
+<html>
+    <head>
+        <title>
+            Random Number DOM
+        </title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.1/css/bootstrap.min.css">
+        <style>
+            .my-cont{
+                margin-top: 5em;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container my-cont">
+            <div class="card text-center  bg-success">
+                <div class="card-header">
+                  Generate Unique Eigth Digit Number
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title" id="hint">Click Below Generate button to generate</h5>
+                  <p class="card-text" id="output">Unique Number is: </p>
+                  <button onclick="action()" class="btn btn-primary">Generate</button>
+                </div>
+                <div class="card-footer text-muted">
+                  Using Recursion
+                </div>
+              </div>
+        </div>
+        <script>
+            var label = "Unique Number is: ";
+            function action(){
+                let arr = [0,1,2,3,4,5,6,7,8,9]
+                //document.getElementById('hint').innerText = "Generating";
+                document.getElementById('output').innerText = label+generate(arr, "");
+                //document.getElementById('hint').innerText = "Click Below Generate button to generate";
+            }
+            function generate(arr, out){
+                if(arr.length > 2){
+                    let k = Math.floor((Math.random() * 10));
+                    k = k%(arr.length);
+                    k = arr.splice(k, 1);
+                    return generate(arr, out+k[0]);
+                }
+                return out;
+                
+            }
+        </script>
+    </body>
+</html>
