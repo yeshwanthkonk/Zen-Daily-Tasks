@@ -1,0 +1,156 @@
+<html>
+    <head>
+        <title>
+            Resume with DOM
+        </title>
+        <style>
+            .main{
+                width: 900px;
+                margin: auto;
+            }
+            .top-div{
+                background-color: gray;
+                height: 250px;
+                text-align : center;
+                
+            }
+            .img-div{
+                border: 0px solid block;
+                padding-top: 3%;
+            }
+            .img-class{
+                border-radius: 50%;
+                border: 4px dotted #efb810;
+            }
+            .name-div{
+                border: 1px solid block;
+                background-color: #efb810;
+                font-size: 30px;
+                padding: 30px 100px;
+                display: inline-block;
+                margin-top: -20px;
+                font-family: Arial, Helvetica, sans-serif;
+                border-radius: 10px;
+            }
+            .white-box{
+                height: 40px;
+                width: 100%;
+                background-color: whitesmoke;
+                margin-top: -65px;
+            }
+            .intro-div{
+                text-align: center;
+            }
+            
+            
+            p{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            
+            .headings{
+                color: gray;
+                font-size: 30px;
+                padding-top: 10px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .left-side{
+                width: 45%;
+                float: left;
+                padding-top: 2%;
+                padding-left: 4%;
+            }
+            .ver-line{
+                width: 10%;
+                float: left;
+                width: 1%;
+                border-left: 2px solid grey;
+                margin-left: 1%;
+                height: 820px;                
+            }
+            .right-side{
+                width:45%;
+                float: left;
+                padding-top: 2%;
+                padding-left: 3%;
+            }
+            .bar{
+                padding: 5px;
+                background-color: rgb(48, 48, 223);
+                border-radius: 5px;
+                width: 100px;
+            }
+            .work-exp{
+                color: black;
+                font-family: Arial, Helvetica, sans-serif;
+
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            var main = document.createElement('div');
+            main.setAttribute('class','main');
+            var top_div = document.createElement('div');
+            top_div.setAttribute('class','top-div');
+
+            var img_div = document.createElement('div');
+            img_div.setAttribute('class','img_div');
+            var img_class = document.createElement('img');
+            img_class.setAttribute('class','img-class');
+            img_class.setAttribute('src', 'profile_1.webp');
+            img_class.setAttribute('height', '50%');
+            img_class.setAttribute('width', '15%');
+            img_div.append(img_class);
+            
+            var name_div = document.createElement('div');
+            name_div.setAttribute('class','name-div');
+            var name_b = document.createElement('b');
+            name_b.innerText = "BRIAN DUDEY";
+            name_div.append(name_b);
+
+            var white_box = document.createElement('div');
+            white_box.setAttribute('class','white-box');
+
+            top_div.append(img_div, name_div, white_box);
+
+            var intro_div = document.createElement('div');
+            intro_div.setAttribute('class', 'intro-div');
+            var intro_p = document.createElement('p');
+            intro_p.innerText = "Yeshwanth Konka, Telangana 507165 | 96668-50191 | yeshwanthkonka@yahoo.com | www.sample.com";
+            intro_div.append(intro_p);
+
+            var hr = document.createElement('hr');
+
+            var left_side = document.createElement('div');
+            left_side.setAttribute('class',"left-side");
+
+            var pro_div = document.createElement('div');
+            var pro_img = document.createElement('img');
+            pro_img.setAttribute('class','img-class');
+            pro_img.setAttribute('src',"profile.png");
+            pro_img.setAttribute('height','6%');
+            pro_img.setAttribute('width','6%');
+
+            pro_img.setAttribute('style',"float: left; margin-right: 30px;");
+            var p_pro = document.createElement('p');
+            p_pro.setAttribute('class','headings');
+            p_pro.innerText="Profile";
+
+            var pro_div_2 = document.createElement('div');
+            pro_div_2.setAttribute('style',"color: black;");
+
+            var p_pro_2 = document.createElement('p');
+            p_pro_2.innerText = `Users with the appropriate permissions will have access to a Read More button that expands additional details about an action or change. Furthermore, each type of activity has an associated glyph that is appropriate to the activity (e.g. an envelope beside an entry about a sent email) and a timestamp.`
+            pro_div_2.append(p_pro_2)
+            pro_div.append(pro_img, p_pro, pro_div_2);
+
+
+            
+            left_side.append(pro_div);
+
+
+            main.append(top_div, intro_div, hr, left_side);
+            document.body.append(main);
+        </script>
+    </body>
+</html>
