@@ -65,7 +65,7 @@
                 width: 1%;
                 border-left: 2px solid grey;
                 margin-left: 1%;
-                height: 820px;                
+                height: 760px;                
             }
             .right-side{
                 width:45%;
@@ -144,9 +144,126 @@
             pro_div_2.append(p_pro_2)
             pro_div.append(pro_img, p_pro, pro_div_2);
 
+            var skill_div = document.createElement('div');
+            var skill_img = document.createElement('img');
+            skill_img.setAttribute('class','img-class');
+            skill_img.setAttribute('src',"skills.png");
+            skill_img.setAttribute('height','6%');
+            skill_img.setAttribute('width','6%');
+
+            skill_img.setAttribute('style',"float: left; margin-right: 30px;");
+            var p_skill = document.createElement('p');
+            p_skill.setAttribute('class','headings');
+            p_skill.innerText="Skills";
+
+            var skill_div_2 = document.createElement('div');
+            skill_div_2.setAttribute('style',"color: black;");
+            var tabl = document.createElement('table');
+            tabl.setAttribute('style', "width: 100%;");
+            var tr1 = document.createElement('tr');
+            var td11 = document.createElement('td');
+            td11.setAttribute("colspan", "2");
+            td11.setAttribute("style", "font-size: 20px; padding-left: 30%;");
+            var b_td11 = document.createElement("b");
+            b_td11.innerText = "Technical Skills";
+            td11.append(b_td11);
+            tr1.append(td11);
+
+            var tr2 = document.createElement('tr');
+            var td21 = document.createElement('td');
+            td21.setAttribute("align", "left");
+            td21.setAttribute("style", "font-size: 20px; padding-left: 10px;");
+            td21.innerText = "JavaScript";
+            var td22 = document.createElement('td');
+            td22.setAttribute("align", "right");
+            var div_td22 = document.createElement('div');
+            div_td22.setAttribute("class", "bar");
+            div_td22.setAttribute("style", "margin-right: 30px; width: 170px;");
+            td22.append(div_td22);
+            tr2.append(td21, td22);
+
+            var tr3 = document.createElement('tr');
+            var td31 = document.createElement('td');
+            td31.setAttribute("align", "left");
+            td31.setAttribute("style", "font-size: 20px; padding-left: 10px;");
+            td31.innerText = "Python";
+            var td32 = document.createElement('td');
+            td32.setAttribute("align", "right");
+            var div_td32 = document.createElement('div');
+            div_td32.setAttribute("class", "bar");
+            div_td32.setAttribute("style", "margin-right: 60px; width: 140px;");
+            td32.append(div_td32);
+            tr3.append(td31, td32);
+
+            var tr4 = document.createElement('tr');
+            var td41 = document.createElement('td');
+            td41.setAttribute("align", "left");
+            td41.setAttribute("style", "font-size: 20px; padding-left: 10px;");
+            td41.innerText = "C++/C";
+            var td42 = document.createElement('td');
+            td42.setAttribute("align", "right");
+            var div_td42 = document.createElement('div');
+            div_td42.setAttribute("class", "bar");
+            div_td42.setAttribute("style", "margin-right: 50px; width: 150px;");
+            td42.append(div_td42);
+            tr4.append(td41, td42);
+
+            var tr5 = document.createElement('tr');
+            var td51 = document.createElement('td');
+            td51.setAttribute("align", "left");
+            td51.setAttribute("style", "font-size: 20px; padding-left: 10px;");
+            td51.innerText = "MySql/Postgresql";
+            var td52 = document.createElement('td');
+            td52.setAttribute("align", "right");
+            var div_td52 = document.createElement('div');
+            div_td52.setAttribute("class", "bar");
+            div_td52.setAttribute("style", "margin-right: 70px;width: 130px;");
+            td52.append(div_td52);
+            tr5.append(td51, td52);
 
 
-            left_side.append(pro_div);
+
+            tabl.append(tr1, tr2, tr3, tr4, tr5);
+
+            skill_div_2.append(tabl)
+
+            skill_div.append(skill_img, p_skill, skill_div_2)
+
+            
+
+            var work_div = document.createElement('div');
+            var work_img = document.createElement('img');
+            work_img.setAttribute('class','img-class');
+            work_img.setAttribute('src',"images.png");
+            work_img.setAttribute('height','6%');
+            work_img.setAttribute('width','6%');
+            work_img.setAttribute('style',"float: left; margin-right: 30px;");
+            var p_work = document.createElement('p');
+            p_work.setAttribute('class','headings');
+            p_work.innerText="Education";
+            var b_work = document.createElement('b');
+            b_work.innerText = "2009 MA in English Literature";
+            var div_1_1 = document.createElement('div');
+            div_1_1.innerText = "Harvard University, Cambridge, MA";
+            var div_1_2 = document.createElement('div');
+            div_1_2.innerText = "3.7 GPA";
+            var div_1_3 = document.createElement('div');
+            div_1_3.innerText = "Fundraised over $30,000 over the course of eight months for Congresswoman Shelley.";
+            var b_work_2 = document.createElement('b');
+            b_work_2.innerText = "2009 MA in English Literature";
+            var div_2_1 = document.createElement('div');
+            div_2_1.innerText = "Harvard University, Cambridge, MA";
+            var div_2_2 = document.createElement('div');
+            div_2_2.innerText = "3.7 GPA";
+            var div_2_3 = document.createElement('div');
+            div_2_3.innerText = "Fundraised over $30,000 over the course of eight months for Congresswoman Shelley.";
+
+            
+            work_div.append(work_img, p_work, b_work, div_1_1, div_1_2, div_1_3, b_work_2, div_2_1, div_2_2, div_2_3);
+
+
+
+            left_side.append(pro_div, skill_div, work_div);
 
             var ver_line = document.createElement('div');
             ver_line.setAttribute('class',"ver-line");
@@ -187,7 +304,38 @@
 
             tabl.append(tr_1, tr_2);
 
+            var ul_r = document.createElement('ul');
+            ul_r.setAttribute("type", "disc");
+            var li1 = document.createElement('li');
+            li1.innerText = "A Full Stack Developer with 5 years of experience in Python, Django, Flask for Retail eCommerce, Javascript, MERN, etc."
+            var li2 = document.createElement('li');
+            li2.innerText = "Received SPOT Award and Best Scrum Team while working at Digitalico."
+            var li3 = document.createElement('li');
+            li3.innerText = "Achieved a Lighthouse score of 100/100 on our frontend"
+            var li4 = document.createElement('li');
+            li4.innerText = `Built a "UI leadership group" at FullStack Labs Inc. to mentor and train new engineers`
+            var li5 = document.createElement('li');
+            li5.innerText = "Improved legacy front end by replacing it with AngularJS, Tomcat API, Java and Spring. Resulted into 50% faster loading times for our data heavy GIS application."
+            var li6 = document.createElement('li');
+            li6.innerText = "Built CI/CD pipelines using Jenkins, Docker, Kubernetes and custom scripts - helping teams deploy more than 30 times in a day"
+            var li7 = document.createElement('li');
+            li7.innerText = "A Full Stack Developer with 5 years of experience in Python, Django, Flask for Retail eCommerce, Javascript, MERN, etc."
+            var li8 = document.createElement('li');
+            li8.innerText = "Received SPOT Award and Best Scrum Team while working at Digitalico."
+            var li9 = document.createElement('li');
+            li9.innerText = "Achieved a Lighthouse score of 100/100 on our frontend"
+            var li10 = document.createElement('li');
+            li10.innerText = `Built a "UI leadership group" at FullStack Labs Inc. to mentor and train new engineers`
+            var li11 = document.createElement('li');
+            li11.innerText = "Improved legacy front end by replacing it with AngularJS, Tomcat API, Java and Spring. Resulted into 50% faster loading times for our data heavy GIS application."
+            var li12 = document.createElement('li');
+            li12.innerText = "Built CI/CD pipelines using Jenkins, Docker, Kubernetes and custom scripts - helping teams deploy more than 30 times in a day"
+
+
+            ul_r.append(li1, li2, li3, li4, li5, li6, li7, li8, li9, li10, li11);
+
             work_exp.append(tabl);
+            work_exp.append(ul_r);
 
 
             pro_div_right.append(pro_img_right, p_pro_right, work_exp);
