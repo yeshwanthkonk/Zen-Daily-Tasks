@@ -43,29 +43,64 @@
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="display-4 bg-success heading">
-                Age Calculator
-            </div>
-            <div class="bg-light content">
-                <div class='date'>
-                    <div class="date-label"> Choose Date of Birth</div>
-                    <input type='date' id='dob'>
-                </div>
-                <div class='date'>
-                    <div class="date-label"> Choose Date by which Age Need to be Calculated</div>
-                    <input type='date' id='to_date'>
-                </div>
-                <div class="text-center butt">
-                    <button onclick="calculate()" class="btn btn-primary">Calculate</button>
-                </div>
-                
-            </div>
-            <div id='output' class="bg-warning">
-                Details:
-            </div>
-        </div>
+        
         <script>
+            var container = document.createElement('div');
+            container.setAttribute('class', 'container');
+
+            var heading = document.createElement('div');
+            heading.setAttribute('class', "display-4 bg-success heading");
+            heading.innerText = "Age Calculator";
+            container.append(heading);
+
+            var content = document.createElement('div');
+            content.setAttribute('class', "bg-light content");
+
+            var date1 = document.createElement('div');
+            date1.setAttribute('class', "date");
+            var date_label1 = document.createElement('div');
+            date_label1.setAttribute('class', 'date-label');
+            date_label1.innerText = "Choose Date of Birth";
+            var input1 = document.createElement('input');
+            input1.setAttribute('type', 'date');
+            input1.setAttribute('id', 'dob');
+            date1.append(date_label1, input1);
+            content.append(date1);
+
+            var date2 = document.createElement('div');
+            date2.setAttribute('class', "date");
+            var date_label2 = document.createElement('div');
+            date_label2.setAttribute('class', 'date-label');
+            date_label2.innerText = "Choose Date by which Age Need to be Calculated";
+            var input2 = document.createElement('input');
+            input2.setAttribute('type', 'date');
+            input2.setAttribute('id', 'to_date');
+            date2.append(date_label2, input2);
+            content.append(date2);
+
+            var butt = document.createElement('div');
+            butt.setAttribute('class', "text-center butt");
+            var butto = document.createElement('button');
+            butto.setAttribute('onclick', "calculate()");
+            butto.setAttribute('class', "btn btn-primary");
+            butto.innerText = "Calculate";
+            butt.append(butto);
+            content.append(butt);
+
+            container.append(content);
+
+            var details = document.createElement('div');
+            details.setAttribute("id", 'output');
+            details.setAttribute("class", "bg-warning");
+            details.innerText = "Details";
+
+            container.append(details);
+
+            document.body.append(container);
+
+
+
+
             document.getElementById('to_date').defaultValue = new Date().toISOString().slice(0, 10);
             function calculate(){
                 let dob = document.getElementById('dob').value;
@@ -74,12 +109,19 @@
                 }
                 else{
                     let to_date = document.getElementById('to_date').value;
+                    if(to_date == new Date().toISOString().slice(0, 10)){
+                        to_date=new Date().toISOString();
+                    }
                     dob = new Date(dob);
                     to_date = new Date(to_date);
+                    if(dob>to_date){
+                        document.getElementById('output').innerText = "Error!\n DOB is choosen greater than Present date.";
+                        return;
+                    }
                     let ms = (to_date - dob);
-                    let sd = ms/1000;
-                    let md = sd/60;
-                    let dc = md/(24*60);
+                    let sd = parseInt(ms/1000);
+                    let md = parseInt(sd/60);
+                    let dc = parseInt(md/(24*60));
                     let years = to_date.getFullYear() - dob.getFullYear();
                     if(dob.getMonth() > to_date.getMonth()){
                         years--;
