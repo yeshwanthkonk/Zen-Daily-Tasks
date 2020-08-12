@@ -89,6 +89,9 @@ input_6.setAttribute("value", "Female");
 input_6.setAttribute("required", "");
 form.append(input_6, label_6);
 
+var br_1 = document.createElement('br');
+form.append(br_1);
+
 var label_7 = document.createElement('label');
 label_7.setAttribute("class", "col-form-label");
 label_7.setAttribute("for", "food");
