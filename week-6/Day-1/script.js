@@ -42,11 +42,22 @@ var users = [
 ];
 var find = function (arr, func, st_in) {
     if (st_in === void 0) { st_in = 0; }
-    for (var i = st_in; i < arr.length; i++) {
-        if (func(arr[i])) {
-            return arr[i];
+    if (func instanceof Function) {
+        for (var i = st_in; i < arr.length; i++) {
+            if (func(arr[i])) {
+                return arr[i];
+            }
         }
     }
+    else if (func instanceof String) {
+        for (var i in arr) {
+            if (arr[i] == func) {
+                return arr[i];
+            }
+        }
+    }
+    // else if(func instanceof Array){
+    // }
 };
 console.log("Return age < 30 for find", find(users, (function (item) { return item.age < 30; })));
 //-------------------------------------------------------------------

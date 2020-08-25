@@ -40,11 +40,24 @@ let users = [
     { user: 'pebbles', age: 1, active: true },
   ]
 let find = (arr, func, st_in = 0)=>{
-    for (let i=st_in; i<arr.length; i++){
-        if(func(arr[i])){
-            return arr[i];
+    if(func instanceof Function){
+        for (let i=st_in; i<arr.length; i++){
+            if(func(arr[i])){
+                return arr[i];
+            }
         }
     }
+    else if(func instanceof String){
+        for (let i in arr){
+            if(arr[i] == func){
+                return arr[i];
+            }
+        }
+    }
+    // else if(func instanceof Array){
+
+    // }
+    
 }
 console.log("Return age < 30 for find", find(users, (item => item.age < 30)))
 //-------------------------------------------------------------------
