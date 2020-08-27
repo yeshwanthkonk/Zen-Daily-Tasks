@@ -51,7 +51,7 @@ class TV{
     volume:number;
     player;
     show;
-    constructor(price, inches, OnOFF = true, brand="SamSung", channel=1, volume=50){
+    constructor(price, inches, OnOFF = false, brand="SamSung", channel=1, volume=50){
 		this.price = price
 		this.inches = inches
 		this.OnOFF = OnOFF
@@ -60,9 +60,7 @@ class TV{
         this.volume = volume
         this.player = document.getElementById('video_player');
         this.show = document.getElementById('show');
-        this.player.src = videos[this.channel-1].sources;
-        this.player.play();
-        this.adjustVolume(this.volume);
+        this.player.volume = this.volume/100;
     }
 
     adjustVolume(vol){
@@ -161,35 +159,35 @@ class Plasma extends TV{
     }
 }
 
-let tv = new LED(23000, 15.6, true, "Samsung", 1, 50);
+let tv = new LED(23000, 15.6, false, "Samsung", 1, 50);
 console.log(tv.volume);
 document.getElementById('+').addEventListener('click',function(){
-    tv.adjustVolume(tv.volume+1);
-    console.log(tv.volume);
+tv.adjustVolume(tv.volume+1);
+console.log(tv.volume);
 })
 document.getElementById('-').addEventListener('click',function(){
-    tv.adjustVolume(tv.volume-1);
-    console.log(tv.volume);
+tv.adjustVolume(tv.volume-1);
+console.log(tv.volume);
 })
 
 
 document.getElementById('next').addEventListener('click',function(){
-    tv.setChannel(tv.channel+1);
-    console.log(tv.channel);
+tv.setChannel(tv.channel+1);
+console.log(tv.channel);
 })
 document.getElementById('prev').addEventListener('click',function(){
-    tv.setChannel(tv.channel-1);
-    console.log(tv.channel);
+tv.setChannel(tv.channel-1);
+console.log(tv.channel);
 })
 
 document.getElementById('mute').addEventListener('click',function(){
-    tv.muteBtn();
+tv.muteBtn();
 })
 
 document.getElementById('>||').addEventListener('click',function(){
-    tv.playPauseBtn();
+tv.playPauseBtn();
 })
 
 document.getElementById('power').addEventListener('click',function(){
-    tv.powerOnOff();
+tv.powerOnOff();
 })

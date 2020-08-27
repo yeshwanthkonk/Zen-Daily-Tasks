@@ -55,7 +55,7 @@ var videos = [
 ];
 var TV = /** @class */ (function () {
     function TV(price, inches, OnOFF, brand, channel, volume) {
-        if (OnOFF === void 0) { OnOFF = true; }
+        if (OnOFF === void 0) { OnOFF = false; }
         if (brand === void 0) { brand = "SamSung"; }
         if (channel === void 0) { channel = 1; }
         if (volume === void 0) { volume = 50; }
@@ -67,9 +67,7 @@ var TV = /** @class */ (function () {
         this.volume = volume;
         this.player = document.getElementById('video_player');
         this.show = document.getElementById('show');
-        this.player.src = videos[this.channel - 1].sources;
-        this.player.play();
-        this.adjustVolume(this.volume);
+        this.player.volume = this.volume / 100;
     }
     TV.prototype.adjustVolume = function (vol) {
         console.log("In", vol);
@@ -168,7 +166,7 @@ var Plasma = /** @class */ (function (_super) {
     };
     return Plasma;
 }(TV));
-var tv = new LED(23000, 15.6, true, "Samsung", 1, 50);
+var tv = new LED(23000, 15.6, false, "Samsung", 1, 50);
 console.log(tv.volume);
 document.getElementById('+').addEventListener('click', function () {
     tv.adjustVolume(tv.volume + 1);
