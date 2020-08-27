@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TV Class</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        area{
+            cursor: pointer;
+        }
+        .tv{
+            position: absolute;
+            top: 10px;
+            right:50px;
+        }
+        video{
+            position: absolute;
+            top: 50px;
+            right: 72px;
+            border-radius: 5px;
+        }
+        .remote{
+            position: absolute;
+            top: 20px;
+            right: 60%;
+        }
+        #show{
+            position: absolute;
+            top: 70px;
+            right: 90px;
+            color: royalblue;
+            text-align: center;
+            font-size: xx-large;
+            font-weight: 600;
+        }
+        #status{
+            position: absolute;
+            bottom: 80px;
+            right: 20%;
+            font-size: 25px;
+            padding:10px;
+            border-radius: 5px;
+            color: rgb(240, 238, 238);
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid">
+        <img src="remote.png" usemap="#image-map" class="remote">
+        <!-- <object data="remote.png" usemap="#image-map" class="remote"></object> --> <!-- Only for Firefox-->
+
+        <map name="image-map">
+            <area alt="+" title="+" id="+" coords="486,334,25" shape="circle">
+            <area alt="-" title="-" id="-" coords="374,333,24" shape="circle">
+            <area alt="prev" title="prev" id="prev"  coords="374,277,24" shape="circle">
+            <area alt="next" title="next" id="next"  coords="486,277,25" shape="circle">
+            <area alt=">||" title=">||" id=">||" coords="429,278,25" shape="circle">
+            <area alt="mute" title="mute" id="mute" coords="429,334,25" shape="circle">
+            <area alt="power" title="power" id="power" coords="429,96,37" shape="circle">
+        </map>
+
+        <img src="TV-1.png" usemap="#image-map" class="tv">
+        <video  width="710px" height="390px" id="video_player" autoplay>
+            
+        </video>
+        <div id="show">
+            
+        </div>
+        <!-- <div class="bg-success" id="status">
+            
+        </div> -->
+    </div>
+    <script src="script.js">
+
+    </script>
+</body>
+</html>
