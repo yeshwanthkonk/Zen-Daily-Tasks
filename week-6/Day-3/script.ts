@@ -60,7 +60,8 @@ class TV{
         this.volume = volume
         this.player = document.getElementById('video_player');
         this.show = document.getElementById('show');
-        this.setChannel(this.channel);
+        this.player.src = videos[this.channel-1].sources;
+        this.player.play();
         this.adjustVolume(this.volume);
     }
 
