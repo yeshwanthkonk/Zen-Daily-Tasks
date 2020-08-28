@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player with API in typescript</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .container{
+            text-align: center;
+            
+            margin-top: 1%;
+        }
+        #search{
+            width:70%;
+            height: 50px;
+            margin:auto;
+            font-size: 20px;
+        }
+        #recommended{
+            margin-left: 100px;
+        }
+        #top{
+            margin-right: 100px;
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+        #tracks{
+            width: 70%;
+            margin: auto;  
+        }
+        .mar{
+            padding: 10px;
+        }
+        .card{
+            border-radius: 5px;
+            background-color: aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>Listen Songs from Shazam</h3>
+        <input type="search" id="search" class="form-control" placeholder="Search here, Type and Press Enter">
+        <h4>OR</h4>
+        <button class="btn btn-success" id="top">Top Tracks</button>
+        <button class="btn btn-success" id="recommended">Recommended Tracks</button>
+        <br>
+        
+        <br>
+        <audio id='player' style="width: 70%;" autoplay controls></audio>
+        <div id='tracks'>
+            
+        </div>
+    </div>
+    <script src="script.js">
+        
+    </script>
+</body>
+</html>
