@@ -24,12 +24,18 @@ To omit node_modules when generating the output
 
 ##### Install Webpack
 We need to install the webpack and others as development dependencies.
+
 npm install webpack webpack-cli -g
+
 npm install webpack webpack-cli
+
 npm install webpack-dev-server --save-dev
+
 Now we need to install a locally TypeScript compiler and the TypeScript loader.
 npm install typescript ts-loader --save-dev
+
 Now we need to create webpack.config.js inside newly created folder
+
 const path = require('path');
 module.exports = {
 	entry: path.join(__dirname, '/zoo.ts'),
