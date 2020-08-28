@@ -56,12 +56,14 @@ module.exports = {
 		extensions: [".tsx", ".ts", ".js"]
 	}
 }
-Write you application in zoo.ts
+
+##### Write you application in zoo.ts
 Create index.html
 Add Start Script in package.json
 "scripts": {
 	"start": "webpack-dev-server --mode development"
 }
+
 In command prompt Run 
 npm start
 Local server will be deployed in http://localhost:PORT
