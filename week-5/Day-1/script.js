@@ -8,8 +8,8 @@ div.append(p);
 document.body.append(div);
 
 p.innerText = 10;
-(
-    function(count, show){
+
+    setTimeout(function(count = 10, show = (count)=>{p.innerText = count;}){
         setTimeout(()=>{
             count--;
             show(count);
@@ -54,5 +54,4 @@ p.innerText = 10;
                 },1000);
             },1000);
         },1000);
-    }
-)(10, (count)=>{p.innerText = count;});
+    }, 0);
