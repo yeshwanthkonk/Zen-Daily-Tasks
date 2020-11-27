@@ -1,0 +1,11 @@
+{
+  "name": "node_weekend_07_11_2020",
+  "version": "1.0.0",
+  "description": "Class",
+  "main": "index.js",
+  "scripts": {
+    "test": "class_07"
+  },
+  "author": "Yeshwanth",
+  "license": "ISC"
+}
