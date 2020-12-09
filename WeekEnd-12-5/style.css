@@ -1,0 +1,80 @@
+.main{
+    width: 900px;
+    margin: auto;
+}
+.top-div{
+    background-color: gray;
+    height: 250px;
+    text-align : center;
+    
+}
+.img-div{
+    border: 0px solid block;
+    padding-top: 3%;
+}
+.img-class{
+    border-radius: 50%;
+    border: 4px dotted #efb810;
+}
+.name-div{
+    border: 1px solid block;
+    background-color: #efb810;
+    font-size: 30px;
+    padding: 30px 100px;
+    display: inline-block;
+    margin-top: -20px;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+}
+.white-box{
+    height: 40px;
+    width: 100%;
+    background-color: whitesmoke;
+    margin-top: -65px;
+}
+.intro-div{
+    text-align: center;
+}
+
+
+p{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.headings{
+    color: gray;
+    font-size: 30px;
+    padding-top: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.left-side{
+    width: 45%;
+    float: left;
+    padding-top: 2%;
+    padding-left: 4%;
+}
+.ver-line{
+    width: 10%;
+    float: left;
+    width: 1%;
+    border-left: 2px solid grey;
+    margin-left: 1%;
+    height: 820px;                
+}
+.right-side{
+    width:45%;
+    float: left;
+    padding-top: 2%;
+    padding-left: 3%;
+}
+.bar{
+    padding: 5px;
+    background-color: rgb(48, 48, 223);
+    border-radius: 5px;
+    width: 100px;
+}
+.work-exp{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
