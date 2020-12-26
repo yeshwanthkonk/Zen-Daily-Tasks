@@ -1,0 +1,111 @@
+.header {
+    background-color: #f44336;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+}
+
+.container{
+    text-align: center;
+}
+
+body{
+    background-color: beige;   
+}
+
+.col-md-2.nopaddingPanel {
+    padding: 0;
+    margin: 0;
+}
+
+.col-md-6.nopaddingPanel {
+    padding: 0;
+    margin: 0;
+}
+
+.form-control{
+    font-size: 24px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Style the list items */
+  ul div {
+    cursor: pointer;
+    position: relative;
+    
+    background: white;
+    font-size: 18px;
+    transition: 0.2s;
+    
+  }
+
+ input[type="text"]{
+    width: 80%;
+    font-size: 20px;
+    border: none;
+    margin-right: 5%;
+    padding: 12px 8px 12px 20px;
+}
+
+input[type="checkbox"]{
+    font-size: 22px;
+    text-align: center;
+    margin-right: 2%;
+}
+
+.fas{
+    margin-right: 1%;
+}
+ 
+ul div:nth-child(odd){
+    background: #eee;
+}
+
+  ul div:nth-child(odd) input{
+    background: #eee;
+}
+  
+  /* Darker background-color on hover */
+  ul div:hover input{
+    background: #ddd;
+  }
+
+  ul div.checked, ul div input[type="text"].checked{
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+}
+
+.read_only_todo:focus{
+    outline: none;
+}
+
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 18px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f5d879;
+    color: white;
+  }
+
+
+  /* ul div.checked::before {
+  content: '';
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 2px 2px 0;
+  top: 10px;
+  left: 16px;
+  transform: rotate(45deg);
+  height: 15px;
+  width: 7px;
+} */
